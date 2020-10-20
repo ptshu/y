@@ -1,0 +1,222 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>在线音乐 - 菩提树 - www.ptshu.cn</title>
+
+<link rel="stylesheet" href="css/smusic.css">
+
+</head>
+<body>
+
+<div class="grid-music-container f-usn">
+    <div class="m-music-play-wrap">
+        <div class="u-cover"></div>
+        <div class="m-now-info">
+            <h1 class="u-music-title"><small>...</small><small>...</small></h1>
+            <div class="m-now-controls">
+                <div class="u-control u-process">
+                    <span class="buffer-process"></span>
+                    <span class="current-process"></span>
+                </div>
+                <div class="u-control u-time">00:00/00:00</div>
+                <div class="u-control u-volume">
+                    <div class="volume-process" data-volume="0.50">
+                        <span class="volume-current"></span>
+                        <span class="volume-bar"></span>
+                        <span class="volume-event"></span>
+                    </div>
+                    <a class="volume-control"></a>
+                </div>
+            </div>
+            <div class="m-play-controls">
+                <a class="u-play-btn prev" title="上一曲"></a>
+                <a class="u-play-btn ctrl-play play" title="暂停"></a>
+                <a class="u-play-btn next" title="下一曲"></a><br>
+               
+            </div>
+        </div>
+    </div>
+    <div class="f-cb">&nbsp;</div>
+    <div class="m-music-list-wrap"></div>
+</div>
+
+<script src="js/smusic.min.js"></script>
+<script>
+var musicList = [
+	{
+		title : '我在景德镇等你',
+		singer : '思思',
+		cover  : '',
+		src    : 'https://webfs.yun.kugou.com/202010191636/33073c544bf929068f98598c073ae824/G189/M0B/0C/14/XYcBAF4K5PGAYmg-AB06n6rPtjg572.mp3'
+	},
+	{
+		title : '包容',
+		singer : '思思',
+		cover  : '',
+		src    : 'https://webfs.yun.kugou.com/202010191635/7462b8726a5d1c6f74ca2c1206d34760/G174/M00/04/01/7g0DAF2vsgGIHVsFAA8vUuQe7nMAAAoQQDzaFUADy9q384.mp3'
+	},
+	{
+		title : '孟婆的碗',
+		singer : '思思',
+		cover  : '',
+		src    : 'https://webfs.yun.kugou.com/202010191637/d4a85a1cdfa910a7544d41dd69b93462/G182/M08/09/17/lpQEAF4Je86IQP_0AAxK6lH4YYcAABCggEHJpAADEsC143.mp3'
+	},
+	{
+		title : '我这一生',
+		singer : '思思',
+		cover  : '',
+		src    : 'https://webfs.yun.kugou.com/202010191639/5ef18f24fd883a1c476312d411a3e24f/G209/M00/1A/11/sZQEAF5q1oSIGjpIAAxuzUbzwM0AAACxQOhndEADG7l381.mp3'
+	},
+	{
+		title : '白狐',
+		singer : '思思',
+		cover  : '',
+		src    : 'https://webfs.yun.kugou.com/202010191640/ce57711e960a19bc3032f6de1a105c11/G174/M02/0D/17/7g0DAF2hZA6ILruDAApcOBw_36kAAAXSgOUclIAClxQ002.mp3'
+	},
+	{
+		title : '我的唇吻不到我爱的人',
+		singer : '思思',
+		cover  : '',
+		src    : 'https://webfs.yun.kugou.com/202010191641/2a07c5bd85e8048e9afa2cf90b4f9039/G229/M08/1A/01/JQ4DAF7mx0-IWG3xAAw6juiCtisAAAEKQNUSU4ADDqm998.mp3'
+	},
+	{
+		title : '忘情牛肉面',
+		singer : '思思',
+		cover  : '',
+		src    : 'https://webfs.yun.kugou.com/202010191642/8870e7d04b4f1d6277b739a7959c1d71/G189/M09/07/17/XYcBAF5LFFmIBKptAAe4RSmtbo8AAAT-gFUaNwAB7hd014.mp3'
+	},
+	{
+		title : '逃爱',
+		singer : '思思',
+		cover  : '',
+		src    : 'https://webfs.yun.kugou.com/202010191643/29f1934dc2aad28854ed1ee0553e644d/G179/M04/0D/01/U4cBAF23z3aIerqvAAj-1UXY-ZAAAAxNAA4EWYACP7t370.mp3'
+	},
+	{
+		title : '大海 ',
+		singer : '思思',
+		cover  : '',
+		src    : 'https://webfs.yun.kugou.com/202010191643/88bdac7c4c0fd61ac59dd250e2935143/G178/M07/15/11/8g0DAF39lA-IULs0AANW9NnbD58AABnpQN_zhMAA1cM587.mp3'
+	},
+	{
+		title : '赌徒',
+		singer : '思思',
+		cover  : '',
+		src    : 'https://webfs.yun.kugou.com/202010191645/2a062b8d956416306cb157bd1dbe75c0/G186/M00/05/01/WocBAF5AgDOIEutlAAbSEeV9CQUAAAQGQF0L7UABtIp481.mp3'
+	},
+	{
+		title : '成瘾成疯又成魔',
+		singer : '思思',
+		cover  : '',
+		src    : 'https://webfs.yun.kugou.com/202010191646/d5a8f2e32995d01dc04629b37fb62f93/G195/M09/06/11/Aw4DAF483qyIUWe6AAtHUuFYeHIAAAOoAJKtbwAC0dq528.mp3'
+	},
+	{
+		title : '思念成霜 (DJ沈念版)',
+		singer : '阿悠悠',
+		cover  : '',
+		src    : 'https://webfs.yun.kugou.com/202010191602/cf32cab0f3e672db808c8c6df38c6433/G224/M05/05/09/gIcBAF8VmdeAYo7PADDmU6BVmYk290.mp3'
+	},
+	{
+		title : '放不下想又怕',
+		singer : 'AZ珍珍',
+		cover  : '',
+		src    : 'https://webfs.yun.kugou.com/202010191602/c4ca856f10c5084d9175a99e98e2a9eb/G204/M01/15/1B/rJQEAF6QRsmADFreAEB4qZx9lAE518.mp3'
+	},
+	{
+		title : '孟婆的碗',
+		singer : '小棉袄',
+		cover  : '',
+		src    : 'https://webfs.yun.kugou.com/202010191612/6042178be94dba9fbd8fe7761d8df3b5/G205/M05/1D/01/bYcBAF5OQgqAZdu-AEPg8zW1RTc159.mp3'
+	},
+	{
+		title : '你是我拒绝别人的理由 (DJ版)',
+		singer : '赵霏儿',
+		cover  : '',
+		src    : 'https://webfs.yun.kugou.com/202010191618/8149b9371c6e8563999ee9ba71bafd1e/G175/M07/1D/0D/T4cBAF4A7kiAS9o0AEDXW6vcq4M624.mp3'
+	},
+	{
+		title : '怎么做怎么过怎么活',
+		singer : '黄静美',
+		cover  : '',
+		src    : 'https://webfs.yun.kugou.com/202010191618/9d3f35bc5c8b5e82bcb6a8ecdc03e798/G196/M06/01/0F/BA4DAF50v8iAV3_TADWXWyd0OLY100.mp3'
+	},
+	{
+		title : '我热情如火,你冰冻成河',
+		singer : '黄静美',
+		cover  : '',
+		src    : 'https://webfs.yun.kugou.com/202010191621/26528db05877ee768f3d5faf3e03d153/G195/M03/12/17/o5QEAF5raEaAD6V6AFA-NudGbn0967.mp3'
+	},
+	{
+		title : '黎明前的黑暗',
+		singer : '孟颖',
+		cover  : '',
+		src    : 'https://webfs.yun.kugou.com/202010191620/fe55dfda620da50c135174a4f5caeb22/G158/M08/08/19/3g0DAFzSxK6AQbNqACCDpnx8Lrs429.mp3'
+	},
+	{
+		title : '你若三冬',
+		singer : '阿悠悠',
+		cover  : '',
+		src    : 'https://webfs.yun.kugou.com/202010191620/28f850538f79e90c6cb44394edef0217/G187/M0B/1F/1B/-w0DAF4DBgKAIvmlAD8DRB-WBd0212.mp3'
+	},
+	{
+		title : '一生与你擦肩而过',
+		singer : '阿悠悠',
+		cover  : '',
+		src    : 'https://webfs.yun.kugou.com/202010191624/9980e06466bb3a4cf4a7de20fdf2aa36/G171/M03/16/14/i5QEAF3CkvSAMkOBADp40Z2CniY290.mp3'
+	},
+	{
+		title : '这扯淡的人生',
+		singer : '苏谭谭',
+		cover  : '',
+		src    : 'https://webfs.yun.kugou.com/202010191625/d29587081d909951337d57967ff29cba/G181/M07/1D/09/9Q0DAF4LCLeARjM5ADmBzu4HGDA877.mp3'
+	},
+	{
+		title : '禅院钟声(古筝佛赞)',
+		singer : '中四',
+		cover  : '',
+		src    : 'https://webfs.yun.kugou.com/202010191626/db8b98504f6c0781442882b3801b53f1/G050/M0A/04/14/0oYBAFZ9XG6AKukNAFmgShS0nYE108.mp3'
+	},
+	{
+		title : '一个人挺好',
+		singer : '孟颖',
+		cover  : '',
+		src    : 'https://webfs.yun.kugou.com/202010191623/d7af98fd67db6c6ba0ecf989b2bd4a06/G189/M00/1B/15/_Q0DAF4CwV-ARWiAADEoqSdflgk967.mp3'
+	},
+	{
+		title : '多年以后',
+		singer : '曹艺馨',
+		cover  : '',
+		src    : 'https://webfs.yun.kugou.com/202010191628/32b1dfb8363a7754c3e822052587b092/G166/M07/1E/01/5g0DAF1EDW6ALvxfAD3GDDnC9nc827.mp3'
+	},
+	{
+		title : '没有你陪伴真的好孤单',
+		singer : '梦然',
+		cover  : '',
+		src    : 'https://webfs.yun.kugou.com/202010191625/8f753cd21a0cce6faaafd2f42eb1dac5/G196/M06/0E/03/pJQEAF5wlrWAV7edAEVA-ZDF__g388.mp3'
+	},
+	{
+		title : '逆流成河',
+		singer : '金南玲',
+		cover  : '',
+		src    : 'https://webfs.yun.kugou.com/202010191631/0ebb3d67297556ac9b60f51ea0618428/G095/M00/18/00/P5QEAFussHyAMPWEADaRkzG3ZHk167.mp3'
+	},
+	{
+		title : '歌手',
+		singer : '歌曲',
+		cover  : '',
+		src    : '地址'
+	}
+];
+new SMusic({
+	musicList:musicList
+});
+</script>
+
+<div style="text-align:center;">
+<p><a href="http://www.ptshu.cn/" target="_blank">菩提树</a></p>
+</div>
+</div>
+</body>
+</html>
