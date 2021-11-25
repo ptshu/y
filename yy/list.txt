@@ -10,6 +10,6 @@ var musicList = [
 		title : '逃之夭夭',
 		singer : '张禾禾',
 		cover  : '',
-		src    : 'yy/01.mp3'
+		src    : 'yy/02.mp3'
 	}
 ];
