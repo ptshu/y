@@ -28,7 +28,7 @@ var myMusics = new Array(
 {src:"http://pts.kuaiyunds.com/pts/黄静美-爱财爱己(DJ Eva版).mp3",title:"黄静美-爱财爱己(DJ Eva版)"},
 {src:"http://pts.kuaiyunds.com/pts/曹艺馨-多年以后.mp3",title:"曹艺馨-多年以后"},
 {src:"http://pts.kuaiyunds.com/pts/阿悠悠-思念成霜(DJ沈念版).mp3",title:"阿悠悠-思念成霜(DJ沈念版)"},
-{src:"MC水公主-疯狂爱爱爱(DJ版).mp3",title:"MC水公主-疯狂爱爱爱(DJ版)"},
+{src:"http://pts.kuaiyunds.com/pts/MC水公主-疯狂爱爱爱(DJ版).mp3",title:"MC水公主-疯狂爱爱爱(DJ版)"},
 {src:"http://pts.kuaiyunds.com/pts/乔艳艳 - 小人物 (DJ沈念版).mp3",title:"乔艳艳 - 小人物 (DJ沈念版)"},
 {src:"http://pts.kuaiyunds.com/pts/张禾禾-逃之夭夭.mp3",title:"张禾禾-逃之夭夭"},
 {src:"http://pts.kuaiyunds.com/pts/黄静美-无人与我（DJ刘超版）.mp3",title:"黄静美-无人与我（DJ刘超版）"},
