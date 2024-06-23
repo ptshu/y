@@ -3,8 +3,9 @@
 菩提树音乐  
 ptsyy.gitee.io  
 #### 文件说明
-* yy
-  * 音乐源文件存放目录  
+* 音乐源文件存放目录
+  * (http://pts.kuaiyunds.com/pts/)
+  *管理地址：(https://storage.zzidc.com/storage/storageList/)
 * index.html
   * 主页  
 * list.js
