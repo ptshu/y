@@ -4,9 +4,14 @@
 ptsyy.gitee.io  
 #### 文件说明
 * 音乐源文件存放目录
+<<<<<<< HEAD
   * http://pts.kuaiyunds.com/pts/  
   * 管理地址：https://storage.zzidc.com/storage/storageList/ 
 
+=======
+  * http://pts.kuaiyunds.com/pts/
+  *管理地址：https://storage.zzidc.com/storage/storageList/
+>>>>>>> c09298e8e149f0a0686e32b206205d97d74da1c8
 * index.html
   * 主页  
 * list.js
