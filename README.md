@@ -6,6 +6,7 @@ ptshu.github.io/y
 * 音乐源文件存放目录
   * http://pts.kuaiyunds.com/pts/  
   * 管理地址：https://storage.zzidc.com/storage/storageList/ 
+  * 文件名不能有空格和大写，因为kuaiyunds在网页登录后会自动把文件名的空格去掉，大写改成小写。
 * index.html
   * 主页  
 * list.js
@@ -28,7 +29,7 @@ ptshu.github.io/y
 ```
 
 git add .
-git commit -m “20040623b”
+git commit -m “20040626”
 git push origin master
 
 git remote -v
